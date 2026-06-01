@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Button } from '@/components/ui/button';
 
@@ -49,11 +49,11 @@ export type Slide =
 function TitleLayout({ slide }: { slide: TitleSlide }) {
   return (
     <div className='flex flex-col items-center justify-center h-full text-center px-12 gap-6'>
-      <h1 className='text-5xl font-bold leading-tight tracking-tight'>
+      <h1 className='text-6xl font-bold leading-tight tracking-tight'>
         {slide.title}
       </h1>
       {slide.subtitle && (
-        <p className='text-2xl text-muted-foreground'>{slide.subtitle}</p>
+        <p className='text-3xl text-muted-foreground'>{slide.subtitle}</p>
       )}
     </div>
   );
@@ -63,11 +63,11 @@ function QuoteLayout({ slide }: { slide: QuoteSlide }) {
   return (
     <div className='flex flex-col items-center justify-center h-full px-16 gap-8 text-center'>
       <span className='text-8xl text-primary leading-none select-none'>"</span>
-      <blockquote className='text-3xl font-medium italic leading-relaxed'>
+      <blockquote className='text-4xl font-medium italic leading-relaxed'>
         {slide.quote}
       </blockquote>
       {slide.author && (
-        <cite className='text-lg text-muted-foreground not-italic'>
+        <cite className='text-xl text-muted-foreground not-italic'>
           — {slide.author}
         </cite>
       )}
@@ -78,10 +78,10 @@ function QuoteLayout({ slide }: { slide: QuoteSlide }) {
 function BulletsLayout({ slide }: { slide: BulletsSlide }) {
   return (
     <div className='flex flex-col justify-center h-full px-16 gap-8'>
-      <h2 className='text-3xl font-bold'>{slide.title}</h2>
+      <h2 className='text-4xl font-bold'>{slide.title}</h2>
       <ul className='flex flex-col gap-4'>
         {slide.bullets.map((b, i) => (
-          <li key={i} className='flex items-start gap-3 text-xl'>
+          <li key={i} className='flex items-start gap-3 text-2xl'>
             <span className='mt-1 size-3 rounded-full bg-primary shrink-0' />
             <span>{b}</span>
           </li>
@@ -94,7 +94,7 @@ function BulletsLayout({ slide }: { slide: BulletsSlide }) {
 function RoadmapLayout({ slide }: { slide: RoadmapSlide }) {
   return (
     <div className='flex flex-col justify-center h-full px-16 gap-6'>
-      <h2 className='text-3xl font-bold'>{slide.title}</h2>
+      <h2 className='text-4xl font-bold'>{slide.title}</h2>
       <ol className='flex flex-col gap-3'>
         {slide.steps.map((step, i) => (
           <li key={i} className='flex items-start gap-4'>
@@ -102,9 +102,9 @@ function RoadmapLayout({ slide }: { slide: RoadmapSlide }) {
               {i + 1}
             </span>
             <div>
-              <span className='font-semibold text-lg'>{step.label}</span>
+              <span className='font-semibold text-xl'>{step.label}</span>
               {step.description && (
-                <span className='text-muted-foreground ml-2 text-base'>
+                <span className='text-muted-foreground ml-2 text-lg'>
                   — {step.description}
                 </span>
               )}
@@ -119,9 +119,9 @@ function RoadmapLayout({ slide }: { slide: RoadmapSlide }) {
 function TableLayout({ slide }: { slide: TableSlide }) {
   return (
     <div className='flex flex-col justify-center h-full px-16 gap-6'>
-      <h2 className='text-3xl font-bold'>{slide.title}</h2>
+      <h2 className='text-4xl font-bold'>{slide.title}</h2>
       <div className='overflow-auto'>
-        <table className='w-full text-left border-collapse text-base'>
+        <table className='w-full text-left border-collapse text-lg'>
           <thead>
             <tr>
               {slide.headers.map((h, i) => (
@@ -138,7 +138,7 @@ function TableLayout({ slide }: { slide: TableSlide }) {
             {slide.rows.map((row, ri) => (
               <tr key={ri} className='border-b border-border'>
                 {row.map((cell, ci) => (
-                  <td key={ci} className='py-2 pr-6'>
+                  <td key={ci} className='py-3 pr-6'>
                     {cell}
                   </td>
                 ))}
@@ -177,6 +177,15 @@ export default function Slideshow({ slides }: { slides: Slide[] }) {
     setDirection(next > index ? 1 : -1);
     setIndex(next);
   };
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') go(index + 1);
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') go(index - 1);
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [index]);
 
   const variants = {
     enter: (d: number) => ({ x: d > 0 ? '100%' : '-100%', opacity: 0 }),
