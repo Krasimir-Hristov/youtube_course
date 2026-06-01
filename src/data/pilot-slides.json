@@ -1,0 +1,112 @@
+[
+  {
+    "layout": "quote",
+    "quote": "AI няма да вземе работата ти. Човек, който ползва AI, ще го направи.",
+    "author": "Красимир Христов"
+  },
+  {
+    "layout": "bullets",
+    "title": "Заплати за AI Engineer (2026)",
+    "bullets": [
+      "🇧🇬 България:  €2500 – 8000/месец",
+      "🇪🇺 EU remote: €60k – €150k/год.",
+      "🇺🇸 US remote: $150k – $400k+/год.",
+      "Не е нужна висша математика — нужен е Python и логика"
+    ]
+  },
+  {
+    "layout": "title",
+    "title": "Красимир Христов",
+    "subtitle": "Web Developer → AI Engineer | Правим прехода заедно"
+  },
+  {
+    "layout": "table",
+    "title": "Кой е AI Engineer?",
+    "headers": ["Роля", "Какво прави", "Изисква се"],
+    "rows": [
+      [
+        "Data Scientist",
+        "Анализира данни, statistics, business insights",
+        "Статистика, Excel, BI инструменти"
+      ],
+      [
+        "ML Engineer",
+        "Тренира модели от нулата, изгражда MLOps pipelines",
+        "Математика, PhD ниво, CUDA"
+      ],
+      [
+        "AI Engineer ✅",
+        "Използва готови LLMs + изгражда софтуерни приложения",
+        "Python, APIs, логическо мислене"
+      ]
+    ]
+  },
+  {
+    "layout": "bullets",
+    "title": "AI Engineer = ?",
+    "bullets": [
+      "Software Engineer — основата",
+      "LLM APIs — OpenAI, Anthropic, OpenRouter",
+      "RAG — даваме на AI наши собствени данни",
+      "Agents — AI, който взима решения и изпълнява задачи",
+      "Tools & MCP — свързваме AI с реалния свят"
+    ]
+  },
+  {
+    "layout": "bullets",
+    "title": "Форматът на канала",
+    "bullets": [
+      "Без лъскави интрота и излишни анимации",
+      "Само screencast — директен запис на екрана",
+      "1 концепция = 1 кратко видео",
+      "Гледаш → Разбираш → Пишеш код"
+    ]
+  },
+  {
+    "layout": "bullets",
+    "title": "Езикът на индустрията",
+    "bullets": [
+      "LLM — Large Language Model",
+      "RAG — Retrieval-Augmented Generation",
+      "Agents — автономни AI агенти",
+      "Prompts — инструкции към модела",
+      "Embeddings — числово представяне на текст",
+      "Обяснения на български, термини на английски"
+    ]
+  },
+  {
+    "layout": "roadmap",
+    "title": "Roadmap — 6 месеца до AI Engineer",
+    "steps": [
+      { "label": "Python от нулата", "description": "без него няма AI" },
+      { "label": "HTTP & APIs", "description": "комуникацията с моделите" },
+      { "label": "LLM APIs", "description": "OpenAI, Anthropic, OpenRouter" },
+      {
+        "label": "LangChain & Vector DBs",
+        "description": "RAG — AI с наши данни"
+      },
+      {
+        "label": "LangGraph",
+        "description": "AI агенти с памет и инструменти"
+      },
+      {
+        "label": "Tools, MCP, FastAPI & Deploy",
+        "description": "реални production системи"
+      }
+    ]
+  },
+  {
+    "layout": "bullets",
+    "title": "Как работи системата",
+    "bullets": [
+      "📺 Гледаш кратко видео (3–15 мин)",
+      "📁 GitHub repo с практическа задача за всеки урок",
+      "⏱ 30–40 мин фокус на ден = AI Engineer за 6 месеца"
+    ]
+  },
+  {
+    "layout": "title",
+    "title": "Абонирай се сега",
+    "subtitle": "Следващото видео: Python от нулата → Начало на пътя"
+  }
+]
