@@ -76,7 +76,7 @@
   },
   {
     "layout": "roadmap",
-    "title": "Roadmap — 6 месеца до AI Engineer",
+    "title": "Roadmap — до AI Engineer",
     "steps": [
       { "label": "Python от нулата", "description": "без него няма AI" },
       { "label": "HTTP & APIs", "description": "комуникацията с моделите" },
