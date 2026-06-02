@@ -107,5 +107,83 @@
         "subtitle": "Следващото видео: Python от нулата → Начало на пътя"
       }
     ]
+  },
+  {
+    "id": "python-01",
+    "title": "Python #1 — Защо Python за AI?",
+    "slides": [
+      {
+        "layout": "quote",
+        "quote": "Защо 95% от AI кода в света е на Python? Не е защото е най-бързият — Rust и C++ са по-бързи. Истинската причина е една.",
+        "author": "Python #1"
+      },
+      {
+        "layout": "table",
+        "title": "Python vs Конкурентите",
+        "headers": ["Език", "Силна страна", "Слабост за AI"],
+        "rows": [
+          ["Python ✅", "Ecosystem, libs, network effect", "По-бавен runtime"],
+          ["JavaScript", "Frontend, Node.js", "AI libs са 6 месеца зад Python"],
+          ["R", "Статистика", "Само statistics, не AI"],
+          ["Julia", "Технически по-добър", "Малка общност"],
+          ["Rust / Go", "Бърз, production inference", "Не е за experimenting"]
+        ]
+      },
+      {
+        "layout": "bullets",
+        "title": "Защо Python печели? (не е syntax-ът)",
+        "bullets": [
+          "🏆 Ecosystem dominance — 30 години научен и инженерен код",
+          "🔬 Researchers го ползват → tutorials → нови learners → нови libs",
+          "⚡ C bindings — heavy lifting е C/CUDA, Python е само interface",
+          "🚀 Нов OpenAI SDK = Python версията излиза ПЪРВА",
+          "📄 Нов research paper с код = кодът е Python"
+        ]
+      },
+      {
+        "layout": "roadmap",
+        "title": "AI Ecosystem Timeline",
+        "steps": [
+          {
+            "label": "1995 — NumPy",
+            "description": "цялата numerical Python започва тук"
+          },
+          { "label": "2007 — scikit-learn", "description": "classical ML" },
+          { "label": "2015 — TensorFlow", "description": "Google" },
+          {
+            "label": "2016 — PyTorch",
+            "description": "Meta — сега индустриалният стандарт"
+          },
+          {
+            "label": "2018 — HuggingFace",
+            "description": "всеки модерен модел е тук"
+          },
+          {
+            "label": "2022 — LangChain",
+            "description": "първата AI agent библиотека"
+          },
+          {
+            "label": "2024 — LangGraph, MCP",
+            "description": "модерните стандарти"
+          }
+        ]
+      },
+      {
+        "layout": "bullets",
+        "title": "Какво ще научиш в Python Playlist-а",
+        "bullets": [
+          "✅ Python синтаксис от нула — variables, loops, functions",
+          "✅ Type hints — важни за AI tooling",
+          "✅ Async — важно за API calls",
+          "✅ OOP basics",
+          "✅ Mini-project: CLI weather app, вика реален API"
+        ]
+      },
+      {
+        "layout": "title",
+        "title": "Следващото видео",
+        "subtitle": "Python Setup за 8 минути — Python, VS Code, uv"
+      }
+    ]
   }
 ]
